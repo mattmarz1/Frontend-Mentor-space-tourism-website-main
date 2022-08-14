@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1.875rem 0 0 3.125rem;
+}
+
+header a:first-of-type {
+  height: 3rem;
+  width: 3rem;
+  margin-right: auto;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 6rem;
+  padding: 0 7.5rem 0 7.5rem;
+  background-color: hsl(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+header nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -26.875rem;
+  top: 50%;
+  height: 0.0625rem;
+  width: 28.125rem;
+  background-color: #979797;
+  opacity: 25.15%;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 2.3125rem 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1688rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a span {
+  margin-right: 0.3125rem;
+  font-weight: 700;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+main {
+  display: flex;
+  gap: 6.25rem;
+  max-width: 62.5rem;
+  margin-inline: auto;
+  margin-block: 4.375rem;
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.left-side span:first-child {
+  margin-right: 0.9375rem;
+  font-weight: 600;
+  opacity: 25%;
+}
+
+.left-side p:first-child {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  white-space: nowrap;
+}
+
+.left-side img {
+  margin-top: 6.25rem;
+  animation: rotate 70s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.left-side img:hover {
+  transform: rotate(100deg);
+}
+
+.right-side nav {
+  margin-top: 6.25rem;
+}
+
+.right-side nav ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.right-side nav ul li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.li-active {
+  color: white;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.1875rem solid white;
+}
+
+li:not(.li-active) {
+  color: #d0d6f9;
+}
+
+.right-side li:not(.li-active):hover {
+  border-bottom: 0.1875rem solid hsl(0 0% 100% / 0.5);
+}
+
+.planet-text {
+  margin-top: 2.1875rem;
+  color: white;
+  font-family: "Bellefair", serif;
+  font-size: 6.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.main-text {
+  width: 27.5rem;
+  padding-bottom: 3.125rem;
+  border-bottom: 0.0625rem solid #383b4b;
+  color: #d0d6f9;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.7;
+  text-transform: none;
+}
+
+.planet-info {
+  display: flex;
+  gap: 4.375rem;
+  margin-top: 1.875rem;
+  text-transform: uppercase;
+}
+
+.planet-info p:first-child {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.1475rem;
+}
+
+.planet-info p:last-child {
+  margin-top: 0.625rem;
+  color: white;
+  font-family: "Bellefair", serif;
+  font-size: 1.75rem;
+}
+
+.active-page {
+  border-bottom: 0.1875rem solid white;
+}
+
+/* Media Queries - Tablets */
+
+@media (max-width: 80.625em) {
+  header nav::before {
+    display: none;
+  }
+}
+
+@media (max-width: 68.75em) {
+  body {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+    overflow: initial;
+  }
+
+  header {
+    margin: 0 0 0 2.5em;
+  }
+
+  header nav {
+    padding: 0 3.125em 0 3.125em;
+  }
+
+  header nav ul {
+    gap: 2.1875em;
+  }
+
+  header nav ul li a {
+    font-size: 0.875em;
+  }
+
+  header nav ul li span {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: initial;
+    margin-block: 2.1875em;
+    text-align: center;
+  }
+
+  .left-side p:first-child {
+    margin-left: 2.5em;
+    font-size: 1.25em;
+    text-align: initial;
+  }
+
+  .left-side img {
+    height: 15.625em;
+    width: 15.625em;
+    margin-top: 3.125em;
+  }
+
+  .right-side nav {
+    margin-top: 2.5em;
+  }
+
+  .right-side nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .planet-text {
+    margin-top: 1.25em;
+    font-size: 5rem;
+  }
+
+  .planet-info {
+    justify-content: center;
+  }
+
+  .main-text {
+    width: 34.375em;
+    font-size: 1em;
+  }
+
+  header nav::before {
+    display: none;
+  }
+}
+
+/* Media Queries - Mobile */
+
+@media (max-width: 34.375em) {
+  body {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5625em 1.875em 0 1.875em;
+  }
+
+  header nav:first-of-type {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    height: 1.25em;
+    width: 1.25em;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15.625em;
+    background-color: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    z-index: 1;
+    list-style: none;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 1.875em;
+    margin-left: 2.5em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1688em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu li:first-child {
+    margin-top: 6.25em;
+  }
+
+  .mobile-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mobile-menu li a span {
+    margin-right: 0.3125em;
+    font-weight: 700;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1.25em;
+    right: 1.875em;
+    height: 1.5625em !important;
+    width: 1.5625em !important;
+    cursor: pointer;
+  }
+
+  .left-side p:first-child {
+    font-size: 1em;
+    margin-left: initial;
+  }
+
+  .left-side img {
+    height: 12.5em;
+    width: 12.5em;
+  }
+
+  .right-side nav ul li {
+    font-size: 0.875em;
+  }
+
+  .planet-text {
+    margin-top: 1.5625rem;
+    font-size: 3.5em;
+  }
+
+  .main-text {
+    width: 21.875em;
+    font-size: 0.9375em;
+  }
+
+  .planet-info {
+    flex-direction: column;
+    gap: 2.5em;
+  }
+}

@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 1.875rem 0 0 3.125rem;
+}
+
+header a:first-of-type {
+  height: 3rem;
+  width: 3rem;
+  margin-right: auto;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 6rem;
+  padding: 0 7.5rem 0 7.5rem;
+  background-color: hsl(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+header nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -26.875rem;
+  top: 50%;
+  height: 0.0625rem;
+  width: 28.125rem;
+  background-color: #979797;
+  opacity: 25.15%;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 2.3125rem 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1688rem;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a span {
+  margin-right: 0.3125rem;
+  font-weight: 700;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+main {
+  display: flex;
+  gap: 6.25rem;
+  max-width: 62.5rem;
+  margin-inline: auto;
+  margin-block: 4.375rem;
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.left-side span:first-child {
+  margin-right: 0.9375rem;
+  font-weight: 600;
+  opacity: 25%;
+}
+
+.left-side p:first-child {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  white-space: nowrap;
+}
+
+.left-side p:nth-child(2) {
+  margin-top: 9.375rem;
+  margin-bottom: 0.625rem;
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  opacity: 25%;
+}
+
+.left-side p:nth-child(3) {
+  margin-bottom: 1.25rem;
+  color: white;
+  font-family: "Bellefair", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.left-side p:nth-child(4) {
+  height: 10rem;
+  width: 28.125rem;
+  color: #d0d6f9;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.dot-container {
+  display: flex;
+  gap: 1.25rem;
+  width: 12.5rem;
+  margin-top: 6.25rem;
+}
+
+.dot-container div {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  border-radius: 50%;
+}
+
+.dot-container div:not(.dot-active) {
+  background-color: #979797;
+  opacity: 17.44%;
+  cursor: pointer;
+}
+
+.dot-container div:not(.dot-active):hover {
+  background-color: #979797;
+  opacity: initial;
+}
+
+.dot-active {
+  background-color: white;
+}
+
+.active-page {
+  border-bottom: 0.1875rem solid white;
+}
+
+/* Media Queries - Tablets */
+
+@media (max-width: 80.625em) {
+  header nav::before {
+    display: none;
+  }
+}
+
+@media (max-width: 68.75em) {
+  body {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+
+  header {
+    margin: 0 0 0 2.5em;
+  }
+
+  header nav {
+    padding: 0 3.125em 0 3.125em;
+  }
+
+  header nav ul {
+    gap: 2.1875em;
+  }
+
+  header nav ul li a {
+    font-size: 0.875em;
+  }
+
+  header nav ul li span {
+    display: none;
+  }
+
+  header nav::before {
+    display: none;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: initial;
+    margin-block: initial;
+    text-align: center;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .left-side p:first-child {
+    margin-top: 1.25em;
+    margin-left: 2.5em;
+    font-size: 1.25em;
+    text-align: initial;
+  }
+
+  .left-side p:nth-child(2) {
+    margin-top: 3.125em;
+    font-size: 1.5em;
+  }
+
+  .left-side p:nth-child(3) {
+    margin-bottom: 0.625em;
+    font-size: 2.5em;
+  }
+
+  .left-side p:nth-child(4) {
+    height: 7em;
+    width: 28.625em;
+    margin: auto;
+    margin-bottom: 1.875em;
+    font-size: 1em;
+    line-height: 1.75em;
+  }
+
+  .right-side img {
+    height: 29.375em;
+    width: 21.875em;
+    margin-top: 2.5em;
+  }
+
+  .dot-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.9375em;
+    margin: auto;
+    margin-top: 1.875em;
+  }
+
+  .dot-container div {
+    height: 0.625em;
+    width: 0.625em;
+  }
+}
+
+/* Media Queries - Mobile */
+
+@media (max-width: 34.375em) {
+  body {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    overflow: initial;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5625em 1.875em 0 1.875em;
+  }
+
+  header nav:first-of-type {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    height: 1.25em;
+    width: 1.25em;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15.625em;
+    background-color: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    z-index: 1;
+    list-style: none;
+  }
+
+  .mobile-menu li {
+    margin-bottom: 1.875em;
+    margin-left: 2.5em;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1688em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu li:first-child {
+    margin-top: 6.25em;
+  }
+
+  .mobile-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mobile-menu li a span {
+    margin-right: 0.3125em;
+    font-weight: 700;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 1.25em;
+    right: 1.875em;
+    height: 1.5625em !important;
+    width: 1.5625em !important;
+    cursor: pointer;
+  }
+
+  .left-side p:first-child {
+    font-size: 1em;
+  }
+
+  .right-side img {
+    height: 23.125em;
+    width: 18.75em;
+  }
+
+  .left-side p:nth-child(2) {
+    font-size: 1em;
+  }
+
+  .left-side p:nth-child(3) {
+    font-size: 1.5em;
+  }
+
+  .left-side p:nth-child(4) {
+    width: 21.875em;
+  }
+
+  .dot-container {
+    margin-top: 5em;
+  }
+}
